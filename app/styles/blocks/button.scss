@@ -1,0 +1,51 @@
+.button {
+  cursor: pointer;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  @extend %paragraph;
+  font-family: "MuseoSansCyrl-700", sans-serif;
+  letter-spacing: 0.03em;
+
+  &--smaller {
+    height: 40px;
+    padding: 0 24px;
+  }
+
+  &--bigger {
+    height: 54px;
+  }
+
+  &--violet {
+    background-color: $colorViolet;
+    color: $colorWhite;
+    border: none;
+
+    &:hover {
+      background-color: $colorVioletLight;
+    }
+
+    &:active {
+      background-color: $colorBlue;
+    }
+
+    &:disabled {
+      background: $colorGray5;
+      color: $colorGray3;
+      cursor: default;
+    }
+  }
+
+  &--outline {
+    background-color: $colorWhite;
+    color: $colorGray1;
+    border: 1px solid $colorBlack;
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,113 @@
+.questions {
+  &__title {
+    @extend %h2;
+    width: 483px;
+    margin-bottom: 68px;
+    position: relative;
+
+    @include onTablet {
+      margin-bottom: 56px;
+    }
+
+    @include onMobile {
+      max-width: 280px;
+      margin-bottom: 40px;
+    }
+
+    &::after {
+      position: absolute;
+      width: 263px;
+      height: 72px;
+      content: "";
+      top: 50%;
+      left: 0;
+      bottom: -10px;
+      right: 0;
+      background-color: $colorViolet;
+      opacity: 0.1;
+      z-index: -1;
+
+      @include onTablet {
+        width: 263px;
+        height: 72px;
+        top: 50%;
+      }
+
+      @include onMobile {
+        width: 195px;
+        height: 50px;
+        top: 67%;
+      }
+    }
+  }
+
+  &__question {
+    cursor: pointer;
+    max-width: 995px;
+    margin: 0 auto 16px;
+
+    &--active {
+      & .questions__question-body {
+        padding: 24px 205px 32px 40px;
+        border: 2px solid $colorViolet;
+        border-top: none;
+        border-radius: 0 0 20px 20px;
+        transition: max-height 0.6s ease-in;
+        transition: padding-bottom 0.6s ease-in;
+        max-height: fit-content;
+
+        @include onMobile {
+          padding: 24px 24px 24px 16px;
+        }
+      }
+
+      & .questions__question-header {
+        border-bottom: none;
+        border-radius: 20px 20px 0 0;
+        padding-bottom: 0;
+      }
+
+      & img {
+        transition: 0.6s;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "MuseoSansCyrl-700";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 33px 40px;
+    border: 2px solid $colorViolet;
+    border-radius: 20px;
+
+    @include onMobile {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 24px 16px;
+    }
+  }
+
+  &__question-title {
+    pointer-events: none;
+  }
+
+  &__question-body {
+    @extend %paragraph;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  & img {
+    pointer-events: none;
+    transition: 0.6s;
+  }
+}

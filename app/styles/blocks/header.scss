@@ -1,0 +1,117 @@
+.header {
+  &__background {
+    position: relative;
+    padding: 100px 0;
+
+    @include onTablet {
+      padding: 40px 0 24px;
+    }
+
+    @include onMobile {
+      padding: 32px 0 16px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $colorViolet;
+      opacity: 0.1;
+      z-index: -1;
+    }
+  }
+
+  &__main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include onTablet {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    @include onMobile {
+      text-align: left;
+    }
+  }
+
+  &__text-container {
+    padding-top: 39px;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    @extend %h1;
+    max-width: 585px;
+    margin-bottom: 32px;
+
+    @include onMobile {
+      margin-bottom: 24px;
+    }
+
+    @include onMobile {
+      margin-bottom: 24px;
+      max-width: 508px;
+    }
+  }
+
+  &__description {
+    @extend %paragraph;
+    color: $colorGray2;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 483px;
+    margin-bottom: 48px;
+
+    @include onTablet {
+      max-width: 508px;
+    }
+
+    @include onMobile {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__button {
+    width: 257px;
+    letter-spacing: 0.03em;
+
+    @include onTablet {
+      margin-bottom: 32px;
+      width: 257px;
+    }
+
+    @include onMobile {
+      margin-bottom: 48px;
+      width: 280px;
+    }
+  }
+
+  &__image {
+    width: 482px;
+    height: 519px;
+
+    @include onTablet {
+      max-width: 418px;
+      max-height: 450px;
+      object-fit: contain;
+    }
+
+    @include onMobile {
+      max-width: 240px;
+      max-height: 270px;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.instructions {
+  &__title {
+    @extend %h2;
+    max-width: 483px;
+    margin-bottom: 68px;
+    position: relative;
+
+    @include onTablet {
+      max-width: 419px;
+      margin-bottom: 56px;
+    }
+
+    @include onMobile {
+      max-width: 250px;
+      margin-bottom: 40px;
+    }
+
+    &::after {
+      position: absolute;
+      width: 296px;
+      content: "";
+      top: 50%;
+      left: 0;
+      bottom: -10px;
+      right: 0;
+      background-color: $colorViolet;
+      opacity: 0.1;
+      z-index: -1;
+
+      @include onTablet {
+        width: 350px;
+        height: 37px;
+        top: 80%;
+      }
+
+      @include onMobile {
+        width: 90%;
+        height: 50px;
+        top: 70%;
+      }
+    }
+  }
+
+  &__steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(250px, 483px) minmax(250px, 483px);
+    gap: 105px 134px;
+    max-width: 1098px;
+    margin-bottom: 320px;
+
+    @include onTablet {
+      gap: 95px 30px;
+      margin-bottom: 300px;
+    }
+
+    @include onMobile {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__step-container {
+    align-self: start;
+    position: relative;
+    background-color: #fff;
+    border: 2px solid $colorViolet;
+    border-radius: 30px;
+    padding: 32px;
+
+    @include onMobile {
+      padding: 24px;
+    }
+
+    &--down {
+      top: 155px;
+
+      @include onTablet {
+        top: 167px;
+      }
+
+      @include onMobile {
+        top: 0;
+      }
+    }
+
+    &--after {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        height: 50%;
+        width: 80%;
+        border-top: 3px dashed $colorViolet;
+        border-right: 3px dashed $colorViolet;
+        border-top-right-radius: 40px;
+        right: -80%;
+        top: 40%;
+
+        @include onTablet {
+          right: -60%;
+        }
+
+        @include onMobile {
+          display: none;
+        }
+      }
+    }
+
+    &--before {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 50%;
+        width: 80%;
+        border-top: 3px dashed $colorViolet;
+        border-left: 3px dashed $colorViolet;
+        border-top-left-radius: 40px;
+        left: -80%;
+        top: 40%;
+
+        @include onTablet {
+          top: 50%;
+          left: -60%;
+        }
+
+        @include onMobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__number {
+    font-family: "MuseoSansCyrl-700", sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: $colorViolet;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-family: "MuseoSansCyrl-700", sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @extend %paragraph;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $colorGray2;
+  }
+}

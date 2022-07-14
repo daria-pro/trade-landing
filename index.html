@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trade Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app/styles/css/main.min.css" />
+    <style type="text/css">
+      @font-face {
+        font-family: "MuseoSansCyrl-900";
+        src: url("./app/fonts/museosanscyrl-900.ttf");
+      }
+      @font-face {
+        font-family: "MuseoSansCyrl-700";
+        src: url("./app/fonts/museosanscyrl-700.ttf");
+      }
+      @font-face {
+        font-family: "MuseoSansCyrl-500";
+        src: url("./app/fonts/museosanscyrl-500.ttf");
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="page__body">
+    <header class="page__section header">
+      <div class="container">
+        <nav class="nav">
+          <a class="nav__logo" href="#">LOGO</a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#questions">How it works</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#instructions">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#instructions">Instructions</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Accounts</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Platforms</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="nav__buttons-container">
+            <div class="nav__lang-select">
+              <input
+                disabled
+                href="#"
+                class="nav__button button button--outline button--smaller"
+                placeholder="EN"
+                id="lang-input"
+                >
+                <ul id="lang-list">
+                  <li>EN</li>
+                  <li>UA</li>
+                  <li>DE</li>
+              </ul>                
+              </input>
+            </div>
+            <a
+              href="#"
+              class="nav__button button button--violet button--smaller"
+              >sign in for free</a
+            >
+          </div>
+          <div class="nav__hamburger" id="nav__hamburger">
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+          </div>
+        </nav>
+      </div>
+      <div class="header__background">
+        <div class="container">
+          <div class="header__main-content">
+            <div class="header__text-container">
+              <h1 class="header__title">Trade everywhere. Invest here!</h1>
+              <p class="header__description">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere.
+              </p>
+              <a
+                class="header__button button button--bigger button--violet"
+                href="#instructions"
+                >Start trading</a
+              >
+            </div>
+            <img class="header__image" src="./images/header-1.png" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page__section instructions" id="instructions">
+        <div class="container">
+          <h2 class="instructions__title">
+            Getting Started Is Fast & Easy
+          </h2>
+          <div class="instructions__steps">
+            <div
+              class="instructions__step-container instructions__step-container--after"
+            >
+              <h3 class="instructions__number">01.</h3>
+              <h3 class="instructions__subtitle">Register</h3>
+              <p class="instructions__text">
+                Complete the simple registration to get your trading
+                credentials.
+              </p>
+            </div>
+
+            <div
+              class="instructions__step-container instructions__step-container--down instructions__step-container--before"
+            >
+              <h3 class="instructions__number">02.</h3>
+              <h3 class="instructions__subtitle">Verification</h3>
+              <p class="instructions__text">
+                Big Invest is required to verify your identity, upload your
+                documents quickly and get approved in minutes.
+              </p>
+            </div>
+
+            <div
+              class="instructions__step-container instructions__step-container--after"
+            >
+              <h3 class="instructions__number">03.</h3>
+              <h3 class="instructions__subtitle">Deposit funds</h3>
+              <p class="instructions__text">
+                Big Invest accepts credit cards and bank wires. Just use the
+                secure deposit form and follow the steps.
+              </p>
+            </div>
+
+            <div
+              class="instructions__step-container instructions__step-container--down"
+            >
+              <h3 class="instructions__number">04.</h3>
+              <h3 class="instructions__subtitle">Start Trading</h3>
+              <p class="instructions__text">
+                Once your deposit has been credited, you can begin trading
+                instantly. In no time you will see profits rolling into your
+                account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="page__section reviews">
+          <div class="reviews__title-container">
+            <h2 class="reviews__title">
+              People love Big Invest
+            </h2>
+            <div class="reviews__nav-buttons">
+              <div class="reviews__prev-btn" onclick="plusSlides(-1)">
+                <img src="./images/leftArrow.svg" />
+              </div>
+              <div class="reviews__next-btn" onclick="plusSlides(1)">
+                <img src="./images/rightArrow.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="reviews__quote-container">
+            <img class="reviews__quote-icon" src="./images/quote.svg" />
+            <div class="reviews__slider-container">
+              <ul class="reviews__cards">
+                <li class="reviews__card">
+                  <div class="reviews__card-header">
+                    <img class="reviews__image" src="./images/reviews-1.png" />
+                    <div class="reviews__person-info">
+                      <h4 class="reviews__person-name">Albert Abello</h4>
+                      <p class="reviews__person-position">Director of Growth</p>
+                    </div>
+                  </div>
+                  <p class="reviews__text">
+                    This magical product actually works! It has radically
+                    changed the way we build our audiences. Increasing new
+                    customer sales by 6x in our most mature market.
+                  </p>
+
+                  <p class="reviews__quantity">01 / 04</p>
+                </li>
+
+                <li class="reviews__card">
+                  <div class="reviews__card-header">
+                    <img class="reviews__image" src="./images/reviews-2.png" />
+                    <div class="reviews__person-info">
+                      <h4 class="reviews__person-name">Marry Smith</h4>
+                      <p class="reviews__person-position">Director of Growth</p>
+                    </div>
+                  </div>
+                  <p class="reviews__text">
+                    This magical product actually works! It has radically
+                    changed the way we build our audiences. Increasing new
+                    customer sales by 6x in our most mature market.
+                  </p>
+                  <p class="reviews__quantity">02 / 04</p>
+                </li>
+                <li class="reviews__card">
+                  <div class="reviews__card-header">
+                    <img class="reviews__image" src="./images/reviews-3.png" />
+                    <div class="reviews__person-info">
+                      <h4 class="reviews__person-name">John Lennon</h4>
+                      <p class="reviews__person-position">Director of Growth</p>
+                    </div>
+                  </div>
+                  <p class="reviews__text">
+                    This magical product actually works! It has radically
+                    changed the way we build our audiences. Increasing new
+                    customer sales by 6x in our most mature market.
+                  </p>
+                  <p class="reviews__quantity">03 / 04</p>
+                </li>
+                <li class="reviews__card">
+                  <div class="reviews__card-header">
+                    <img class="reviews__image" src="./images/reviews-4.png" />
+                    <div class="reviews__person-info">
+                      <h4 class="reviews__person-name">Alex McCarthy</h4>
+                      <p class="reviews__person-position">Director of Growth</p>
+                    </div>
+                  </div>
+                  <p class="reviews__text">
+                    This magical product actually works! It has radically
+                    changed the way we build our audiences. Increasing new
+                    customer sales by 6x in our most mature market.
+                  </p>
+                  <p class="reviews__quantity">04 / 04</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+       <section class="page__section questions " id="questions">
+          <h2 class="questions__title">
+            Frequently asked questions
+          </h2>
+          <ul class="questions__list">
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  How do I change my details?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  What platforms will I be able to use?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  How do I change my details?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  How do I change my details?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  How do I change my details?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  How do I change my details?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+            <li class="questions__question">
+              <div class="questions__question-header">
+                <h3 class="questions__question-title">
+                  How do I change my details?
+                </h3>
+                <img src="./images/plus.svg" />
+              </div>
+              <p class="questions__question-body">
+                We provide only the best trading software. The trading terminal
+                MetaTrader4 is the most popular and convenient platform for
+                access to global exchanges. You can work anywhere. All you need
+                is the Internet because the necessary trading tools are already
+                collected in one place and are available in a couple of clicks.
+                Use only the best and develop with us!
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+       <section class="page__section contact" id="contact">
+        <div class="container">
+          <div class="contact__main-content">
+            <div class="contact__text-container">
+              <h2 class="contact__title">Contact us!</h2>
+              <p class="contact__description">
+                The support staff and customer service are available to help you
+                with any questions or needs you might have. Just drop us a line.
+              </p>
+              <p class="contact__paragraph">
+                This site is owned and operated by Kode Tech Solutions LTD
+              </p>
+              <h5 class="contact__subtitle">Phone:</h5>
+              <p class="contact__paragraph">442038857261</p>
+              <h5 class="contact__subtitle">Email:</h5>
+              <p class="contact__paragraph">help@google.com</p>
+              <h5 class="contact__subtitle">Address:</h5>
+              <p class="contact__paragraph">
+                Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro,
+                Republic of the Marshall Islands, MH 96960
+              </p>
+            </div>
+            <form class="contact__form">
+              <input
+                class="contact__input"
+                placeholder="Name"
+                type="text"
+                required
+              />
+              <input
+                class="contact__input contact__input--email"
+                placeholder="Email"
+                type="email"
+                id="email"
+                required
+              />
+              <p class="contact__errorText" id="errorText">
+                Incorrect email type
+              </p>
+              <textarea
+                class="contact__input contact__input--text-area"
+                placeholder="Message"
+                type="text"
+                rows="3"
+                required
+              ></textarea>
+              <button
+                class="contact__button button button--violet button--bigger"
+                type="submit"
+                onclick="validate()"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section> 
+    </main> 
+    <footer class="page__section footer">
+      <div class="container">
+        <div class="footer__text-content">
+          <a class="footer__logo" href="#">LOGO</a>
+          <div class="footer__column">
+            <h5 class="footer__title">Information and high risk warning:</h5>
+            <p class="footer__paragraph">
+              Trading with foreign exchange (FX), contract for differences
+              (CFDs) and precious metals carries a high level of risk that may
+              not be suitable for all investors. Leverage creates additional
+              risk and loss exposure. Before you decide to trade foreign
+              exchange or contract for differences, carefully consider your
+              investment objectives, experience level, and risk tolerance.
+            </p>
+          </div>
+          <div class="footer__column">
+            <h5 class="footer__title">Legal disclaimer:</h5>
+            <p class="footer__paragraph">
+              Forex trading entails significant risks and is not appropriate for
+              all investors. The possibility of incurring substantial losses
+              should be taken into account. It is therefore important to
+              understand the possible consequences of investing. Traders should
+              weigh their earning potential against the risks involved and act
+              accordingly. Interactive Trade Ltd operating under brand and using
+              domenLink domain within the European Economic Area.
+            </p>
+          </div>
+          <ul class="footer__column">
+            <li class="footer__menu-item">
+              <a href="#instructions" class="footer__menu-link">About us</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#instructions" class="footer__menu-link">Instructions</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Platforms</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#contact" class="footer__menu-link">Contact Us</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Sign in</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#contact" class="footer__menu-link">Sign up for free</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer__bottom-list">
+          <li class="footer__bottom-item">
+            Copyright 2020, All Right Reserved
+          </li>
+          <li class="footer__bottom-item">
+            <a class="footer__bottom-link" href="#">Terms and Conditions</a>
+          </li>
+          <li class="footer__bottom-item">
+            <a class="footer__bottom-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer__bottom-item">
+            <a class="footer__bottom-link" href="#">Risk Warnings</a>
+          </li>
+          <li class="footer__bottom-item">
+            <a class="footer__bottom-link" href="#">Anti-Money Laundering</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./app/js/script.js"></script>
+  </body>
+</html>

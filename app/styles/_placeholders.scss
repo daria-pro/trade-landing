@@ -1,0 +1,32 @@
+%h1 {
+  font-family: "MuseoSansCyrl-700", sans-serif;
+  font-size: 64px;
+  line-height: 72px;
+  color: $colorGray1;
+
+  @include onTablet {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  @include onMobile {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+%h2 {
+  font-family: "MuseoSansCyrl-700", sans-serif;
+  font-size: 56px;
+  line-height: 66px;
+  color: $colorGray1;
+
+  @include onMobile {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+%paragraph {
+  font-family: "Montserrat", sans-serif;
+}

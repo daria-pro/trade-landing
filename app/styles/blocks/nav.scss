@@ -1,0 +1,245 @@
+.nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+
+  @include onMobile {
+    padding: 32px 0;
+  }
+
+  &__list {
+    font-family: "MuseoSansCyrl-700", sans-serif;
+    display: flex;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: $colorGray1;
+    z-index: 2;
+
+    @include onTablet {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      padding: 20px 0 70px;
+
+      &--active {
+        left: 0;
+      }
+    }
+
+    @include onMobile {
+      padding: 20px 0 120px;
+    }
+  }
+
+  &__logo {
+    font-family: "MuseoSansCyrl-900", sans-serif;
+    text-decoration: none;
+    color: $colorGray1;
+    margin-right: 57px;
+  }
+
+  &__item {
+    &:not(:nth-child(-n + 1)) {
+      margin-left: 32px;
+
+      @include onSmallDesktop {
+        margin-left: 26px;
+      }
+
+      @include onTablet {
+        margin: 0 0 20px;
+      }
+    }
+
+    @include onTablet {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $colorGray1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__buttons-container {
+    display: flex;
+    margin-left: auto;
+    z-index: 3;
+
+    @include onMobile {
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      left: -100%;
+      top: 315px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      transition: 0.3s;
+      padding: 20px 0;
+      margin: 0 auto;
+
+      &--active {
+        left: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__lang-select {
+    position: relative;
+
+    @include onTablet {
+      position: fixed;
+      left: -100%;
+      top: 315px;
+      width: 80px;
+      height: 40px;
+      transition: 0.3s;
+      margin: 0 auto;
+      z-index: 6;
+    }
+
+    @include onMobile {
+      top: 370px;
+    }
+
+    &--active {
+      @include onTablet {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        z-index: 6;
+      }
+    }
+  }
+
+  &__lang-select ul {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 44px;
+    margin: 0;
+    width: 80px;
+    background: #fff;
+    box-shadow: inset 0 0 1px #d6d6d6;
+    border: 1px solid $colorBlack;
+    border-radius: 20px;
+    padding: 10px 0;
+
+    &::before {
+      position: fixed;
+      z-index: 6;
+      top: 0;
+      left: 0;
+      background: transparent;
+      content: "";
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__lang-select li {
+    padding: 5px 16px;
+    list-style: none;
+    position: relative;
+    z-index: 7;
+    font-family: "MuseoSansCyrl-700", sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    color: $colorGray1;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    &:not(:nth-child(2)) {
+      margin-right: 24px;
+      padding-right: 21px;
+      width: 80px;
+      position: relative;
+      background: url("../../../images/downArrow.svg") no-repeat;
+      background-position: 70% 50%;
+
+      &::placeholder {
+        color: $colorGray1;
+      }
+    }
+
+    &--active {
+      &:nth-child(1) {
+        @include onTablet {
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 0;
+          z-index: 6;
+        }
+      }
+    }
+
+    & img {
+      margin-left: 8px;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    margin-left: auto;
+
+    @include onTablet {
+      display: block;
+      cursor: pointer;
+      margin-left: 48px;
+
+      &--active .nav__bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &--active .nav__bar:nth-child(1) {
+        -webkit-transform: translateY(5px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &--active .nav__bar:nth-child(3) {
+        -webkit-transform: translateY(-5px) rotate(-45deg);
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+
+    @include onMobile {
+      margin-left: auto;
+    }
+  }
+
+  &__bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: $colorBlack;
+    border-radius: 2px;
+
+    &:not(:nth-child(3)) {
+      margin: 3px auto;
+    }
+  }
+}

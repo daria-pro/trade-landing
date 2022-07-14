@@ -1,0 +1,154 @@
+.contact {
+  position: relative;
+  padding: 120px 0;
+
+  @include onTablet {
+    padding: 48px 90px;
+  }
+
+  @include onMobile {
+    padding: 48px 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $colorViolet;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  &__main-content {
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__text-container {
+    max-width: 483px;
+
+    @include onTablet {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__title {
+    @extend %h2;
+    margin-bottom: 32px;
+
+    @include onTablet {
+      text-align: center;
+    }
+
+    @include onMobile {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__description {
+    @extend %paragraph;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 48px;
+
+    @include onTablet {
+      margin-bottom: 32px;
+    }
+
+    @include onMobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    font-family: "MuseoSansCyrl-500", sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    margin: 16px 0 8px;
+  }
+
+  &__paragraph {
+    @extend %paragraph;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+
+    &:nth-child(3) {
+      margin-bottom: 24px;
+
+      @include onMobile {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  &__form {
+    height: fit-content;
+    max-width: 585px;
+    padding: 80px;
+    border: 2px solid $colorViolet;
+    border-radius: 20px;
+    background-color: $colorWhite;
+
+    @include onTablet {
+      padding: 80px 42px;
+    }
+
+    @include onMobile {
+      padding: 48px 16px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+    padding: 6px 16px;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+
+    &::placeholder {
+      @extend %paragraph;
+      font-weight: 400;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $colorGray3;
+      color: $colorGray2;
+      padding: 6px 16px;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__errorText {
+    color: #eb5757;
+    font-family: "MuseoSansCyrl-700", sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    margin: 4px 0;
+    visibility: hidden;
+  }
+
+  &__button {
+    margin: 40px auto 0;
+    width: 172px;
+  }
+}

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "MuseoSansCyrl-700";
+  src: url("../../fonts/museosanscyrl-700.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.page {
+  &__section {
+    margin-bottom: 140px;
+
+    @include onTablet {
+      margin-bottom: 120px;
+    }
+  }
+}
