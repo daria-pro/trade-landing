@@ -18,6 +18,7 @@
 
     @include onMobile {
       margin-bottom: 18px;
+      max-width: 280px;
     }
 
     &::after {
