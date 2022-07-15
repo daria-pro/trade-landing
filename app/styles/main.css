@@ -644,6 +644,14 @@ table {
     z-index: 6;
   }
 }
+.nav__lang-select img {
+  position: absolute;
+  left: 50px;
+  top: 18px;
+  width: 10px;
+  height: 5px;
+  z-index: 12;
+}
 .nav__lang-select ul {
   display: none;
   position: absolute;
@@ -686,8 +694,6 @@ table {
   margin-right: 24px;
   width: 80px;
   position: relative;
-  background: url("../../../images/downArrow.svg") no-repeat;
-  background-position: 70% 50%;
 }
 .nav__button:not(:nth-child(2))::placeholder {
   color: #333333;

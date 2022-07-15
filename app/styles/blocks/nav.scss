@@ -126,6 +126,15 @@
         z-index: 6;
       }
     }
+
+    & img {
+      position: absolute;
+      left: 50px;
+      top: 18px;
+      width: 10px;
+      height: 5px;
+      z-index: 12;
+    }
   }
 
   &__lang-select ul {
@@ -175,8 +184,6 @@
       margin-right: 24px;
       width: 80px;
       position: relative;
-      background: url("../../../images/downArrow.svg") no-repeat;
-      background-position: 70% 50%;
 
       &::placeholder {
         color: $colorGray1;
