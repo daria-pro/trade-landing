@@ -78,9 +78,11 @@ const navButtons = document.querySelector(".nav__buttons-container");
 const langButton = navButtons.querySelector(
   ".nav__buttons-container > .nav__lang-select"
 );
+const signInButton = navButtons.querySelector(".nav__buttons-container > a");
 
 hamburger.addEventListener("click", mobileMenu);
 navLink.forEach((n) => n.addEventListener("click", closeMenu));
+signInButton.addEventListener("click", closeMenu);
 
 function mobileMenu() {
   hamburger.classList.toggle("nav__hamburger--active");
@@ -92,6 +94,8 @@ function mobileMenu() {
 function closeMenu() {
   hamburger.classList.remove("nav__hamburger--active");
   navMenu.classList.remove("nav__list--active");
+  navButtons.classList.remove("nav__buttons-container--active");
+  langButton.classList.remove("nav__button--active");
 }
 
 //Language select
